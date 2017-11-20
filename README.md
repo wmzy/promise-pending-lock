@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/wmzy/promise-pending-lock.svg?branch=master)](https://travis-ci.org/wmzy/promise-pending-lock)
+[![Coverage Status](https://coveralls.io/repos/github/wmzy/promise-pending-lock/badge.svg?branch=master)](https://coveralls.io/github/wmzy/promise-pending-lock?branch=master)
 # Promise pending lock
 
 > Call an async function multi before the first resolve, only run once and share the result.

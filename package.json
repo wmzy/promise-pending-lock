@@ -6,8 +6,12 @@
   "scripts": {
     "test": "mocha -r should -r should-sinon"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["promise", "lock"],
+  "author": "wmzy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wmzy/promise-pending-lock.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "mocha": "^4.0.1",

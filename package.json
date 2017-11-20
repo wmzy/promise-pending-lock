@@ -4,7 +4,8 @@
   "description": "Call an async function multi before the first resolve, only run once and share the result.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r should -r should-sinon"
+    "test": "nyc mocha -r should -r should-sinon",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "promise",
@@ -17,7 +18,9 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
     "should": "^13.1.3",
     "should-sinon": "0.0.6",
     "sinon": "^4.1.2"

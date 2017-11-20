@@ -8,6 +8,10 @@ ncp-debug.log
 npm-debug.log
 package-lock.json
 
+# nyc
+coverage
+.nyc_output
+
 # IDE
 .idea
 .vscode

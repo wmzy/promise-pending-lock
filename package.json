@@ -6,6 +6,7 @@
   "scripts": {
     "test": "nyc mocha -r babel-core/register -r should -r should-sinon",
     "build": "babel promise-pending-lock.js --out-file index.js",
+    "prepublish": "npm run build",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [

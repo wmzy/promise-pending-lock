@@ -1,7 +1,7 @@
-const _ = require('lodash/fp');
-const should = require('should');
-const sinon = require('sinon');
-const promisePendingLock = require('..');
+import _ from 'lodash/fp';
+import should from 'should';
+import sinon from 'sinon';
+import promisePendingLock from '../promise-pending-lock';
 
 describe('Promise pending lock', function () {
   it('should run once', async function () {

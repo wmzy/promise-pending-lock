@@ -1,4 +1,4 @@
-const _ = require('lodash/fp');
+const identity = v => v;
 
 /**
  * 对同一个异步任务的多次调用同时只执行一次，并共享同一结果
@@ -6,14 +6,14 @@ const _ = require('lodash/fp');
  * @param [options] {object}
  * @returns {function(...[*])}
  */
-module.exports = function promisePendingLock(asyncFn, {
-  hashParams = _.identity,
-  cloneResult = _.identity
+export default function promisePendingLock(asyncFn, {
+  hashParams = identity,
+  cloneResult = identity
 } = {}) {
   const waiterMap = {};
   return (...params) => {
     const pk = hashParams(params);
-    if (_.isEmpty(waiterMap[pk])) {
+    if (!waiterMap[pk]) {
       waiterMap[pk] = [];
       asyncFn(...params)
         .then(r => {

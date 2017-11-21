@@ -53,5 +53,14 @@ describe('Promise pending lock', function () {
     should.notStrictEqual(r1, r2);
     should.notStrictEqual(r1.foo, r2.foo);
   });
+
+  it('should reject when failed', async function () {
+    const task = sinon.spy(() => Promise.reject({}));
+
+    const fn = promisePendingLock(task);
+    const [e1, e2] = await Promise.all([fn().catch(_.identity), fn().catch(_.identity)]);
+    task.should.have.callCount(1);
+    should.strictEqual(e1, e2);
+  });
 });
 

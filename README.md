@@ -15,7 +15,7 @@ npm install promise-pending-lock
 ### Simple
 
 ```javascript
-const promisePendingLock = require('promise-pending-lock');
+import promisePendingLock from 'promise-pending-lock';
 
 function task() {
   return Promise.resolve({});
@@ -31,8 +31,8 @@ Promise.all([fn(), fn()])
 ### Hash param
 
 ```javascript
-const promisePendingLock = require('promise-pending-lock');
-const hash = require('object-hash');
+import promisePendingLock = from 'promise-pending-lock';
+import hash from 'object-hash';
 
 function task() {
   return Promise.resolve({});
@@ -49,8 +49,8 @@ Promise.all([fn({foo: 'bar'}), fn({foo: 'bar'}), fn({foo: 'baz'})])
 ### Clone result
 
 ```javascript
-const _ = require('lodash/fp');
-const promisePendingLock = require('promise-pending-lock');
+import _ from 'lodash/fp';
+import promisePendingLock = from 'promise-pending-lock';
 
 function task() {
   return Promise.resolve({});
@@ -64,8 +64,3 @@ Promise.all([fn(), fn()])
     console.log(_.equals(r1, r2));// true
   });
 ```
-
-## TODO
-
-- [ ] support UMD
-- [ ] rm dependencies

@@ -3,11 +3,13 @@
   "version": "0.2.1",
   "description": "Call an async function multi before the first resolve, only run once and share the result.",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "nyc mocha -r babel-core/register -r should -r should-sinon",
     "build": "babel promise-pending-lock.js --out-file index.js",
     "prepublish": "npm run build",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "dtslint": "dtslint types"
   },
   "keywords": [
     "promise",

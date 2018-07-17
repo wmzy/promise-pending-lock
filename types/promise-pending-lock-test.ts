@@ -37,3 +37,10 @@ promisePendingLock((arg1: number, arg2: number, arg3: number, arg4: number, arg5
 
 // $ExpectType: (arg1: number, arg2: number, arg3: number, arg4: number, arg5: number) => Promise<number>
 promisePendingLock((arg1: number, arg2: number, arg3: number, arg4: number, arg5: number) => new Promise<number>(ignore));
+
+promisePendingLock(() => new Promise<void>(ignore), {});
+
+promisePendingLock(() => new Promise<void>(ignore), {
+  cloneResult: (v) => v,
+  hashParams: (v) => v
+});

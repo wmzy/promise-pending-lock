@@ -65,9 +65,9 @@ Promise.all([fn(), fn()])
   });
 ```
 
-# Integration with TypeScript
+## Integration with TypeScript
 
-DRange includes TypeScript definitions.
+promise-pending-lock includes TypeScript definitions.
 
 ```typescript
 import promisePendingLock from 'promise-pending-lock';

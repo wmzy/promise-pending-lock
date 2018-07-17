@@ -31,7 +31,7 @@ Promise.all([fn(), fn()])
 ### Hash param
 
 ```javascript
-import promisePendingLock = from 'promise-pending-lock';
+import promisePendingLock from 'promise-pending-lock';
 import hash from 'object-hash';
 
 function task() {
@@ -50,7 +50,7 @@ Promise.all([fn({foo: 'bar'}), fn({foo: 'bar'}), fn({foo: 'baz'})])
 
 ```javascript
 import _ from 'lodash/fp';
-import promisePendingLock = from 'promise-pending-lock';
+import promisePendingLock from 'promise-pending-lock';
 
 function task() {
   return Promise.resolve({});

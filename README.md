@@ -64,3 +64,18 @@ Promise.all([fn(), fn()])
     console.log(_.equals(r1, r2));// true
   });
 ```
+
+# Integration with TypeScript
+
+DRange includes TypeScript definitions.
+
+```typescript
+import promisePendingLock from 'promise-pending-lock';
+```
+
+Use dtslint to check the definition file.
+
+```bash
+npm install -g dtslint
+npm run dtslint
+```

@@ -31,7 +31,7 @@ Promise.all([fn(), fn()])
 ### Hash param
 
 ```javascript
-import promisePendingLock = from 'promise-pending-lock';
+import promisePendingLock from 'promise-pending-lock';
 import hash from 'object-hash';
 
 function task() {
@@ -50,7 +50,7 @@ Promise.all([fn({foo: 'bar'}), fn({foo: 'bar'}), fn({foo: 'baz'})])
 
 ```javascript
 import _ from 'lodash/fp';
-import promisePendingLock = from 'promise-pending-lock';
+import promisePendingLock from 'promise-pending-lock';
 
 function task() {
   return Promise.resolve({});
@@ -63,4 +63,19 @@ Promise.all([fn(), fn()])
     console.log(r1 === r2);// false
     console.log(_.equals(r1, r2));// true
   });
+```
+
+## Integration with TypeScript
+
+promise-pending-lock includes TypeScript definitions.
+
+```typescript
+import promisePendingLock from 'promise-pending-lock';
+```
+
+Use dtslint to check the definition file.
+
+```bash
+npm install -g dtslint
+npm run dtslint
 ```

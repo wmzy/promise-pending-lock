@@ -76,6 +76,5 @@ import promisePendingLock from 'promise-pending-lock';
 Use dtslint to check the definition file.
 
 ```bash
-npm install -g dtslint
 npm run dtslint
 ```

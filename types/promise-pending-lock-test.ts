@@ -1,3 +1,5 @@
+// TypeScript Version: 2.9
+
 import promisePendingLock from "promise-pending-lock";
 
 function ignore() {}

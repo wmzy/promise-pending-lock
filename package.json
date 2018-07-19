@@ -1,6 +1,6 @@
 {
   "name": "promise-pending-lock",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Call an async function multi before the first resolve, only run once and share the result.",
   "main": "index.js",
   "types": "types/index.d.ts",

@@ -30,6 +30,8 @@ Promise.all([fn(), fn()])
 
 ### Hash param
 
+**Note**: If the task function has params, you should provide the `hashParams` function to transform the params array to a cache key.
+By default, tread the params array as a string.
 ```javascript
 import promisePendingLock from 'promise-pending-lock';
 import hash from 'object-hash';

@@ -62,5 +62,13 @@ describe('Promise pending lock', function () {
     task.should.have.callCount(1);
     should.strictEqual(e1, e2);
   });
+
+  it('task param can be "constructor"', async function () {
+    const task = sinon.spy(() => Promise.resolve({}));
+
+    const fn = promisePendingLock(task);
+    await fn('constructor')
+    task.should.have.been.called();
+  });
 });
 

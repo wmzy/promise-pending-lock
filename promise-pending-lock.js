@@ -10,7 +10,7 @@ export default function promisePendingLock(asyncFn, {
   hashParams = identity,
   cloneResult = identity
 } = {}) {
-  const waiterMap = {};
+  const waiterMap = Object.create(null);
   return (...params) => {
     const pk = hashParams(params);
     if (!waiterMap[pk]) {
